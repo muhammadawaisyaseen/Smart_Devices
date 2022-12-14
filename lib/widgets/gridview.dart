@@ -17,19 +17,35 @@ class GridViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20,
-      width: 20,
+      // height: 20,
+      // width: 20,
       decoration: BoxDecoration(
-        color: Colors.lightBlue,
+        color: Color(0xFFecebec),
         borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
+        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(icon),
-          Row(
-            children: [
-              Text(name),
-            ],
+          Image.asset(
+            icon,
+            height: 80,
+            // width: 80,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(name),
+                Switch(
+                  value: false,
+                  onChanged: (value) => {},
+                )
+              ],
+            ),
           )
         ],
       ),

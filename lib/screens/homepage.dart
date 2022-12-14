@@ -11,15 +11,15 @@ class HomePage extends StatelessWidget {
 
   List devices = [
     ['assets/icons/bulb.png', 'Smart Light', false],
-    // ['ac.png', 'Smart AC', false],
-    // ['tv.png', 'Smart TV', false],
-    // ['fan.png', 'Smart Fan', false]
+    ['assets/icons/ac.png', 'Smart AC', false],
+    ['assets/icons/tv.png', 'Smart TV', false],
+    ['assets/icons/fan.png', 'Smart Fan', false]
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white30,
+      backgroundColor: Color(0xFFdcdbdc),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -56,8 +56,11 @@ class HomePage extends StatelessWidget {
             ),
             Expanded(
                 child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, crossAxisSpacing: 20, mainAxisSpacing: 20),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 4 / 3,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20),
               itemCount: devices.length,
               itemBuilder: (context, index) {
                 return GridViewPage(
