@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/gridview.dart';
 
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
 
   List devices = [
     ['assets/icons/bulb.png', 'Smart Light', false],
-    ['assets/icons/ac.png', 'Smart AC', false],
+    ['assets/icons/ac.png', 'Smart AC', true],
     ['assets/icons/tv.png', 'Smart TV', false],
     ['assets/icons/fan.png', 'Smart Fan', false]
   ];
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
                   color: Color.fromARGB(255, 57, 53, 53),
                 ),
                 const Icon(
-                  Icons.supervised_user_circle_sharp,
+                  Icons.person,
                   size: 45,
                 )
               ],
@@ -43,9 +44,9 @@ class HomePage extends StatelessWidget {
               height: 20,
             ),
             const Text("Welcome Home"),
-            const Text(
+            Text(
               "Awais Yaseen",
-              style: TextStyle(fontSize: 30),
+              style: GoogleFonts.bebasNeue(fontSize: 45),
             ),
             const SizedBox(
               height: 20,
